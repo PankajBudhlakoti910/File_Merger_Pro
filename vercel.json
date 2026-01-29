@@ -5,7 +5,5 @@
   "env": {
     "PYTHONUNBUFFERED": "1",
     "PIP_DISABLE_PIP_VERSION_CHECK": "1"
-  },
-  "installCommand": "pip install --upgrade pip setuptools && pip install -r requirements.txt",
-  "ignoreCommand": "git check-ignore"
+  }
 }
