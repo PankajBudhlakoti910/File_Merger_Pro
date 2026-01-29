@@ -10,7 +10,11 @@ from werkzeug.utils import secure_filename
 
 warnings.filterwarnings('ignore')
 
-app = Flask(__name__, template_folder='../templates')
+# Get the directory where this file is located
+app_dir = os.path.dirname(os.path.abspath(__file__))
+template_dir = os.path.join(os.path.dirname(app_dir), 'templates')
+
+app = Flask(__name__, template_folder=template_dir)
 app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024  # 500MB max file size
 app.config['UPLOAD_FOLDER'] = '/tmp/uploads'
 
